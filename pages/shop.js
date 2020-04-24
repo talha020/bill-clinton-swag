@@ -6,7 +6,7 @@ import Layout from '../layouts';
 import Header from '../components/header';
 import Carousel from '../components/carousel';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Modal = Dynamic(() => import('../components/modal'), { ssr: false });
 const PRODUCTS = [
