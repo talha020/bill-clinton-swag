@@ -14,12 +14,12 @@ const Page = () => {
   const imageUrl = `https://s3.amazonaws.com/Clinton_Swag/${swagId}/swag.png`;
 
   // Precache the generated tshirt on the next page
-  useEffect(() => {
-    if (swagId) {
-      let img = new Image();
-      img.src = `/api/shirt_mockup?swag=${swagId}`;
-    }
-  }, [swagId]);
+  // useEffect(() => {
+  //   if (swagId) {
+  //     let img = new Image();
+  //     img.src = `/api/shirt_mockup?swag=${swagId}`;
+  //   }
+  // }, [swagId]);
 
   return (
     <Layout>
@@ -37,11 +37,6 @@ const Page = () => {
           {swagId && (
             <>
               <img src={imageUrl} />
-              <Link href={`/shop?swag=${swagId}`}>
-                <button className="text-white bg-blue-900 p-3 text-lg font-bold sticky bottom-0">
-                  Shop
-                </button>
-              </Link>
             </>
           )}
         </div>

@@ -27,6 +27,10 @@ export default () => {
 
   const selectedProduct = PRODUCTS.find(x => x.size === selectedSize);
 
+  useEffect(() => {
+    window.location = 'https://billclintonswag.com';
+  }, []);
+
   return (
     <Layout>
       <Head>
