@@ -17,7 +17,8 @@ app = Flask(__name__)
 s3 = boto3.client(
     's3',
     aws_access_key_id=os.environ.get('ACCESS_KEY_ID'),
-    aws_secret_access_key=os.environ.get('SECRET_ACCESS_KEY')
+    aws_secret_access_key=os.environ.get('SECRET_ACCESS_KEY'),
+    region='us-east-1',
 )
 
 COORDS = [
